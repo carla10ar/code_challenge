@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: password
+      database: test
+
+info:
+  build:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
