@@ -33,11 +33,6 @@ public class LocationRepositoryImpl implements LocationRepository {
             criterias.add(new Criteria("description").regex(searchText,"i"));
         }
 
-//        if (longitude != null && latitude != null) {
-//            Point point = new Point(latitude, longitude);
-//            criterias.add(new Criteria("contactInfo.gps").near(point));
-//        }
-
         if (gidList != null && !gidList.isEmpty()) {
             criterias.add(new Criteria("source.globalId").in(gidList));
         }

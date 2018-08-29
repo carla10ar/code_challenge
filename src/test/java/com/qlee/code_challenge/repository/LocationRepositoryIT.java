@@ -67,15 +67,6 @@ public class LocationRepositoryIT {
         assertThat(result.get(0).getConsumerFeatures().isHasMobileAccess()).isFalse();
     }
 
-//    @Test
-//    public void testFindAllByFilters_withLatitudeLongitude() throws Exception {
-//        List<Location> result = repository.findAllByFilters(null, LATITUDE, LONGITUDE, DEFAULT_RADIUS, null, DEFAULT_LIMIT, null, false, false,
-//                false);
-//
-//        assertThat(result).isNotNull().hasSize(1);
-//        assertThat(result.get(0).getConsumerFeatures().isHasMobileAccess()).isFalse();
-//    }
-
     @Test
     public void testFindAllByFilters_ommitMerchantInfo() throws Exception {
         List<Location> result = repository.findAllByFilters(null, null, null, null, null, DEFAULT_LIMIT, null, true, false,
